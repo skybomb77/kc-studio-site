@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kent & KClaw Studio — AI 創作套件</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        :root { --bg:#0a0a0f; --panel:#12121a; --border:#1e1e2e; --text:#eee; --muted:#888; }
+        body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans TC',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+        a { text-decoration:none; color:inherit; }
+        .container { max-width:1100px; margin:0 auto; padding:0 24px; }
+        .hero { text-align:center; padding:80px 0 40px; }
+        .hero .brand { font-size:1.2rem; font-weight:800; color:#f59e0b; margin-bottom:8px; letter-spacing:4px; }
+        .hero h1 { font-size:3rem; font-weight:800; margin-bottom:16px; background:linear-gradient(135deg,#f59e0b,#3b82f6,#a855f7,#00e87b,#ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-size:300% 300%; animation:gradient 4s ease infinite; }
+        @keyframes gradient { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+        .hero p { color:var(--muted); font-size:1.15rem; max-width:600px; margin:0 auto 40px; }
+        .products { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px; padding:0 0 60px; }
+        .product-card { background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:32px; transition:all .3s; display:flex; flex-direction:column; }
+        .product-card:hover { transform:translateY(-4px); }
+        .product-card .emoji { font-size:2.5rem; margin-bottom:12px; }
+        .product-card h3 { font-size:1.4rem; margin-bottom:4px; display:flex; align-items:center; gap:8px; }
+        .product-card .tag { font-size:.7rem; padding:2px 10px; border-radius:999px; font-weight:600; }
+        .product-card .tag-live { background:#00e87b22; color:#00e87b; }
+        .product-card .tag-dev { background:#f59e0b22; color:#f59e0b; }
+        .product-card .desc { color:var(--muted); font-size:.9rem; margin:8px 0 16px; flex:1; }
+        .product-card .feats { list-style:none; font-size:.85rem; margin-bottom:20px; }
+        .product-card .feats li { padding:3px 0; }
+        .product-card .feats li::before { content:"✦ "; opacity:.5; }
+        .product-card .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 24px; border-radius:10px; font-weight:600; font-size:.9rem; cursor:pointer; border:none; transition:all .2s; width:100%; justify-content:center; }
+        .product-card .btn-tone { background:#f59e0b; color:#0a0a0f; }
+        .product-card .btn-tone:hover { background:#e08e00; }
+        .product-card .btn-wire { background:#3b82f6; color:#fff; }
+        .product-card .btn-wire:hover { background:#2563eb; }
+        .product-card .btn-frame { background:#a855f7; color:#fff; }
+        .product-card .btn-frame:hover { background:#9333ea; }
+        .product-card .btn-snap { background:#00e87b; color:#0a0a0f; }
+        .product-card .btn-snap:hover { background:#00cc6a; }
+        .product-card .btn-comic { background:#ec4899; color:#fff; }
+        .product-card .btn-comic:hover { background:#db2777; }
+        .footer { border-top:1px solid var(--border); padding:24px 0; text-align:center; color:var(--muted); font-size:.8rem; }
+        @media(max-width:768px) {
+            .hero h1 { font-size:2rem; }
+            .products { grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <div class="brand">KENT & KCLAW STUDIO</div>
+        <h1>AI 創作套件</h1>
+        <p>五款 AI 引擎，涵蓋音樂、影片、圖片、商品攝影、漫畫，一站式創作平台</p>
+    </div>
+
+    <div class="products">
+        <div class="product-card">
+            <div class="emoji">🎵</div>
+            <h3>ToneForge 音鍛 <span class="tag tag-dev">開發中</span></h3>
+            <div class="desc">AI 配樂引擎 — 輸入文字描述，AI 自動生成完整配樂，支援搖滾、古典、電子等 8 種風格</div>
+            <ul class="feats">
+                <li>文字描述 → 完整配樂</li>
+                <li>8+ 音樂風格</li>
+                <li>MP3/WAV 下載</li>
+            </ul>
+            <a href="https://skybomb77.github.io/toneforge-site" class="btn btn-tone"><i class="fa-solid fa-music"></i> 前往使用</a>
+        </div>
+
+        <div class="product-card">
+            <div class="emoji">🎬</div>
+            <h3>WireVision 線視 <span class="tag tag-dev">開發中</span></h3>
+            <div class="desc">AI MV 製作器 — 上傳音樂，AI 自動分析節拍與情緒，生成匹配的音樂影片</div>
+            <ul class="feats">
+                <li>音樂 → MV 影片</li>
+                <li>節拍同步視覺</li>
+                <li>HD/4K 輸出</li>
+            </ul>
+            <a href="https://skybomb77.github.io/wirevision-site" class="btn btn-wire"><i class="fa-solid fa-film"></i> 前往使用</a>
+        </div>
+
+        <div class="product-card">
+            <div class="emoji">🖼️</div>
+            <h3>FrameForge 畫鍛 <span class="tag tag-dev">開發中</span></h3>
+            <div class="desc">AI 圖片生成器 — 輸入文字描述，AI 自動生成高品質圖片，10+ 藝術風格可選</div>
+            <ul class="feats">
+                <li>文字 → 高品質圖片</li>
+                <li>10+ 藝術風格</li>
+                <li>最高 4K 解析</li>
+            </ul>
+            <a href="https://skybomb77.github.io/frameforge-site" class="btn btn-frame"><i class="fa-solid fa-image"></i> 前往使用</a>
+        </div>
+
+        <div class="product-card">
+            <div class="emoji">📸</div>
+            <h3>SnapForge 瞬拍 <span class="tag tag-live">上線中</span></h3>
+            <div class="desc">AI 商品攝影 — 上傳商品照，AI 自動去背、生成專業級商品圖，多種場景背景</div>
+            <ul class="feats">
+                <li>一鍵去背換背景</li>
+                <li>多種場景風格</li>
+                <li>電商規格輸出</li>
+            </ul>
+            <a href="https://skybomb77.github.io/kc-product-shots-site" class="btn btn-snap"><i class="fa-solid fa-camera"></i> 前往使用</a>
+        </div>
+
+        <div class="product-card">
+            <div class="emoji">📖</div>
+            <h3>ComicForge 漫鍛 <span class="tag tag-live">上線中</span></h3>
+            <div class="desc">AI 漫畫生成器 — 上傳角色圖、輸入劇本，AI 自動生成一致性多格漫畫</div>
+            <ul class="feats">
+                <li>角色一致性（IP-Adapter）</li>
+                <li>6 種漫畫風格</li>
+                <li>AI 智慧對話框</li>
+            </ul>
+            <a href="https://skybomb77.github.io/comicforge-site" class="btn btn-comic"><i class="fa-solid fa-book-open"></i> 前往使用</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Kent & KClaw Studio © 2026 — AI 創作，無限可能
+    </div>
+</div>
+</body>
+</html>
